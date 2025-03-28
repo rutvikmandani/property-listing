@@ -1,0 +1,220 @@
+.container {
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  transition: all 5s;
+  overflow: hidden;
+  background-image: url("../../public/images/hero-bg.jpg");
+  animation: scaleUp 3s ease-in-out forwards;
+  display: inline-block;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.85);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    opacity: 1;
+    height: max-content;
+    max-height: 1000px; /* Adjust based on your content */
+    overflow: visible;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    height: max-content;
+    max-height: 1000px;
+    overflow: visible;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.slideDownAnimation {
+  animation: slideDown 0.5s ease-out forwards;
+  transform-origin: top;
+}
+
+.slideUpAnimation {
+  animation: slideUp 0.5s ease-out forwards;
+  transform-origin: top;
+}
+
+.initialState {
+  opacity: 0;
+  height: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.imgSwiperContainer {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+
+  a {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.swiperContainer {
+  :global(.swiper-slide-active) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cityWrapper {
+  .cityName {
+    visibility: visible;
+  }
+  .hoverContent {
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
+  }
+  &:hover {
+    .cityName {
+      visibility: hidden;
+    }
+    .hoverContent {
+      visibility: visible;
+      animation: bgColor 0.5s ease-out forwards;
+    }
+  }
+}
+
+@keyframes bgColor {
+  from {
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+    max-height: 1000px; /* Adjust based on your content */
+    overflow: visible;
+  }
+}
+
+.calContainer {
+  background-image: url("../../public/images/searchAreaBg.webp");
+  margin: 50px 0;
+  padding: 0 16px 115px 16px;
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.bannerWrapper {
+  .innerBanner {
+    height: 96px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 96px;
+      margin: 0 0 0 -96px;
+      transform: skew(36deg);
+      -webkit-transform: skew(36deg);
+      -moz-transform: skew(36deg);
+      -o-transform: skew(36deg);
+      background: #000;
+    }
+    &::after {
+      height: 70px;
+      margin: 0;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 75px;
+      margin: 0 0 0 10px;
+      transform: skew(36deg);
+      -webkit-transform: skew(36deg);
+      -moz-transform: skew(36deg);
+      -o-transform: skew(36deg);
+      background: #000;
+      bottom: 0;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bannerWrapper {
+    .innerBanner {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 96px;
+        margin: 0;
+        transform: skew(0deg);
+      }
+    }
+  }
+}
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1.5rem;
+
+  .innerContent {
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: 640px) {
+      max-width: 800px;
+    }
+
+    @media (min-width: 768px) {
+      max-width: 1100px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 1400px;
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 1400px;
+    }
+  }
+}
+
+.detailPageImg {
+  aspect-ratio: 3 / 2;
+}

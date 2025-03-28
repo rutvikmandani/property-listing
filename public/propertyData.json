@@ -1,0 +1,180 @@
+[
+  {
+    "title": "Scarborough Village",
+    "sqft": 0,
+    "beds": 3,
+    "baths": 2,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/thumbnail/4ceddced-3889-4bdb-abdb-0de5f4db5e32-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/medium/4ceddced-3889-4bdb-abdb-0de5f4db5e32-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/thumbnail/03f24a6a-0fc1-4016-9d1b-2759b6caee94-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/large/e8350108-c514-47ae-988d-687879b5b7c3-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/medium/020acb66-20a1-44ea-b055-d1353177ea55-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/large/020acb66-20a1-44ea-b055-d1353177ea55-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/thumbnail/a7b0573d-8008-4894-a5d8-e146d05026f0-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/medium/2f20950d-9fb2-447d-a6c0-062ae87adfc8-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/medium/11de280b-8b5c-4810-8276-a2a58305d9ed-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/E12044318/thumbnail/cc814911-b417-4c67-b428-92ee297dbb8e-t.jpg"
+    ],
+    "address": "36 Brinloor Boulevard, Toronto, ON M1M 1L5",
+    "price": "849,900",
+    "listingKey": "E12044318",
+    "transactionType": "For Sale",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T05:15:03.732000Z"
+  },
+  {
+    "title": "Willowdale East",
+    "sqft": 0,
+    "beds": 0,
+    "baths": 0,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044317/thumbnail/86901914-ca50-44fe-998b-00d45a6ca0c6-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044317/medium/86901914-ca50-44fe-998b-00d45a6ca0c6-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044317/large/86901914-ca50-44fe-998b-00d45a6ca0c6-l.jpg"
+    ],
+    "address": "#Parking P5/25 - 20 olive Avenue, Toronto, ON M2N 7G5",
+    "price": "15,000",
+    "listingKey": "C12044317",
+    "transactionType": "For Sale",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T05:10:19.451000Z"
+  },
+  {
+    "title": "Bayview Village",
+    "sqft": "600-699",
+    "beds": "1+1",
+    "baths": 1,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/thumbnail/c3f4698a-f8d1-4623-8969-4e4321fe23ec-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/medium/c3f4698a-f8d1-4623-8969-4e4321fe23ec-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/large/c3f4698a-f8d1-4623-8969-4e4321fe23ec-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/thumbnail/1887fa15-e6db-4773-bc89-4a9f3771f2f1-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/medium/1887fa15-e6db-4773-bc89-4a9f3771f2f1-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/large/1887fa15-e6db-4773-bc89-4a9f3771f2f1-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/thumbnail/a6ed15c4-912b-4b22-9247-a2d0de25c17e-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/thumbnail/2b33f4d7-3a06-4b71-a801-a594a0ac093a-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/medium/2b33f4d7-3a06-4b71-a801-a594a0ac093a-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044314/large/2b33f4d7-3a06-4b71-a801-a594a0ac093a-l.jpg"
+    ],
+    "address": "#619 - 6 Greenbriar Road, Toronto, ON M2K 0H6",
+    "price": "2,350",
+    "listingKey": "C12044314",
+    "transactionType": "For Lease",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T05:00:18.087000Z"
+  },
+  {
+    "title": "Willowdale East",
+    "sqft": 0,
+    "beds": 0,
+    "baths": 0,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044313/thumbnail/bfe9da4a-2a53-412b-a49e-0a910c6dd858-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044313/medium/bfe9da4a-2a53-412b-a49e-0a910c6dd858-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044313/large/bfe9da4a-2a53-412b-a49e-0a910c6dd858-l.jpg"
+    ],
+    "address": "#parking - 22 olive Avenue, Toronto, ON M2N 7G6",
+    "price": "15,000",
+    "listingKey": "C12044313",
+    "transactionType": "For Sale",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T05:00:18.064000Z"
+  },
+  {
+    "title": "Westminster-Branson",
+    "sqft": "900-999",
+    "beds": "2+1",
+    "baths": 2,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/medium/e8b5bffa-67fa-4fbc-b2ab-35bb79439153-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/medium/cf780490-3095-4ffd-856d-9a4fa0a9e342-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/medium/ef53f7db-a973-4ca3-8651-4250b0bf8cb2-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/medium/a5399902-3f6e-4d25-8dca-73948abc30af-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/large/a5399902-3f6e-4d25-8dca-73948abc30af-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/thumbnail/964ce4e0-5770-48f0-b90b-787ac44f58e9-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/medium/79d64cb5-af6d-4c6b-b232-5b40070dcc9f-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/medium/9b412ab1-e0f0-4063-b080-52dda28abf81-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/large/4c65088d-31f0-4ba0-9ecd-ecbf326bd84e-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044311/thumbnail/162b110d-7266-434f-9540-0daa45f6c890-t.jpg"
+    ],
+    "address": "#234 - 15 Coneflower Crescent, Toronto, ON M2R 0A5",
+    "price": "699,888",
+    "listingKey": "C12044311",
+    "transactionType": "For Sale",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T04:55:02.273000Z"
+  },
+  {
+    "title": "Islington-City Centre West",
+    "sqft": "700-799",
+    "beds": 2,
+    "baths": 2,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/medium/ce7b3229-f37e-484d-9872-03a27ab7664d-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/large/ce7b3229-f37e-484d-9872-03a27ab7664d-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/thumbnail/5c261a40-5813-4666-90f0-4f0aeb348032-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/medium/5c261a40-5813-4666-90f0-4f0aeb348032-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/large/5c261a40-5813-4666-90f0-4f0aeb348032-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/thumbnail/14821b47-ec1e-41e0-b976-643d96155510-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/medium/14821b47-ec1e-41e0-b976-643d96155510-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/thumbnail/aeef2ef3-6f35-4b70-a280-fdf3e89cb326-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/medium/aeef2ef3-6f35-4b70-a280-fdf3e89cb326-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044310/large/9f3474eb-3a4b-4add-82e0-0e8f70234329-l.jpg"
+    ],
+    "address": "#535 - 26 Gibbs Road, Toronto, ON M9B 0E3",
+    "price": "499,999",
+    "listingKey": "W12044310",
+    "transactionType": "For Sale",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T04:55:02.245000Z"
+  },
+  {
+    "title": "Humbermede",
+    "sqft": "1100-1500",
+    "beds": "3+1",
+    "baths": 2,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/thumbnail/d7754583-da50-4adb-8ea0-e82344492a34-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/medium/d7754583-da50-4adb-8ea0-e82344492a34-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/large/d7754583-da50-4adb-8ea0-e82344492a34-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/thumbnail/a77fe27f-f4be-47e1-8e1c-9fad3bea8a09-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/medium/a77fe27f-f4be-47e1-8e1c-9fad3bea8a09-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/large/a77fe27f-f4be-47e1-8e1c-9fad3bea8a09-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/thumbnail/f294eff4-4de1-4378-8f57-bb97f7bcd772-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/thumbnail/8b22913e-2aa7-4c12-98cb-970563758a15-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/medium/8b22913e-2aa7-4c12-98cb-970563758a15-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/W12044306/large/8b22913e-2aa7-4c12-98cb-970563758a15-l.jpg"
+    ],
+    "address": "34 Belleglade Court, Toronto, ON M9M 2W4",
+    "price": "899,800",
+    "listingKey": "W12044306",
+    "transactionType": "For Sale",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T04:50:18.087000Z"
+  },
+  {
+    "title": "Trinity-Bellwoods",
+    "sqft": 0,
+    "beds": 3,
+    "baths": 2,
+    "images": [
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/large/6ebbca9c-40d6-4440-b313-e073a9922979-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/thumbnail/f03c98e3-a0ab-4d15-8440-f9d3000dde66-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/medium/f03c98e3-a0ab-4d15-8440-f9d3000dde66-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/large/f03c98e3-a0ab-4d15-8440-f9d3000dde66-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/medium/b0a45225-a825-452e-916c-2f27558be574-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/large/b0a45225-a825-452e-916c-2f27558be574-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/thumbnail/2a90d228-a97e-4f35-9dbe-2d57b2ad3d84-t.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/medium/2a90d228-a97e-4f35-9dbe-2d57b2ad3d84-m.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/large/2a90d228-a97e-4f35-9dbe-2d57b2ad3d84-l.jpg",
+      "https://s3.ca-central-1.amazonaws.com/mls-trreb/properties/C12044297/large/9576263c-3341-4033-97c8-c185cf892c53-l.jpg"
+    ],
+    "address": "314 Euclid Avenue, Toronto, ON M6J 2K2",
+    "price": "1,650,000",
+    "listingKey": "C12044297",
+    "transactionType": "For Sale",
+    "isFavorite": false,
+    "createdAt": "2025-03-27T04:35:03.544000Z"
+  }
+]
