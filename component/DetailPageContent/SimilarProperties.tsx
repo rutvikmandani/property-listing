@@ -19,8 +19,6 @@ const SimilarProperties = ({
   baths,
   sqft,
   listingKey,
-  isNew,
-  index,
 }: any) => {
   const handleRedirect = () => {};
 
@@ -97,8 +95,11 @@ const SimilarProperties = ({
         <p>MLS&reg; {listingKey}</p>
         <p>{"TEK REALTY INC."}</p>
       </div>
-      <Link href="/property-detail" className="bg-[#000] text-white p-2 flex justify-center rounded cursor-pointer">
-      READ MORE
+      <Link
+        href="/property-detail"
+        className="bg-[#000] text-white p-2 flex justify-center rounded cursor-pointer"
+      >
+        READ MORE
       </Link>
     </>
   );

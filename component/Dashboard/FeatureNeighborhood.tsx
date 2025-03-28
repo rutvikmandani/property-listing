@@ -2,6 +2,12 @@ import React from "react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import { FaPlus } from "react-icons/fa";
 
+interface CityType {
+  name: string;
+  thumbnail: null;
+  count: number;
+}
+
 const FeatureNeighborhood = () => {
   const images: string[] = [
     "/images/cities/Toronto.jpg",
@@ -59,10 +65,12 @@ const FeatureNeighborhood = () => {
   ];
   return (
     <div className="text-center py-[25px] px-4">
-      <h3 className="text-[27px] font-normal text-black pb-4">Featured Neighbourhoods</h3>
+      <h3 className="text-[27px] font-normal text-black pb-4">
+        Featured Neighbourhoods
+      </h3>
 
       <div className="flex flex-wrap justify-center">
-        {cities.map((city: any, index: number) => (
+        {cities.map((city: CityType, index: number) => (
           <div
             key={city.name}
             className={`relative w-[50%] lg:w-[25%] wow animate__animated animate__fadeInUp col-span-2 ${styles.cityWrapper}`}

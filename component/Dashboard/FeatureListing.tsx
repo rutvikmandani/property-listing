@@ -10,15 +10,29 @@ import "swiper/css/pagination";
 import SimilarProperties from "../DetailPageContent/SimilarProperties";
 import Link from "next/link";
 
+interface Property {
+  title: string;
+  sqft: number | string;
+  beds: number | string;
+  baths: number;
+  images: string[];
+  address: string;
+  price: string;
+  listingKey: string;
+  transactionType: string;
+  isFavorite: boolean;
+  createdAt: string;
+}
+
 const FeatureListing = () => {
-  const getData = (data: any) => {
+  const getData = (data: Property, index: number) => {
     return (
       <SwiperSlide>
         <div
-          key={data.id}
+          key={index}
           className={`w-[100%] max-w-[440px] relative shrink-0 bg-white shadow-lg rounded-lg overflow-hidden p-[15px] text-[#212529]`}
         >
-          <SimilarProperties {...data} index={data.id} />
+          <SimilarProperties {...data} index={index} />
         </div>
       </SwiperSlide>
     );
@@ -57,7 +71,9 @@ const FeatureListing = () => {
         className={styles.swiperContainer}
         pagination={false}
       >
-        {properties.map((property: any) => getData(property))}
+        {properties.map((property: Property, index: number) =>
+          getData(property, index)
+        )}
       </Swiper>
       <div className="flex gap-5 pt-4 justify-center items-center">
         <button className="prev-btn cursor-pointer bg-white p-2 rounded">
