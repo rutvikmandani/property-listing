@@ -73,6 +73,7 @@ const page = () => {
                     src={img}
                     className={"w-full h-full object-cover"}
                     alt={`Image ${index + 1}`}
+                    key={index}
                   />
                 ))}
               </div>
