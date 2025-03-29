@@ -1,3 +1,4 @@
+import { EMAIL, MOBILE_NUMBER } from "@/lib/constant";
 import React from "react";
 import { FaPhone, FaEnvelope } from "react-icons/fa";
 
@@ -12,14 +13,14 @@ const GetContactDetails = () => {
       <div className="flex md:flex-col gap-4 md:gap-0 md:p-6 flex-wrap items-center justify-center">
         <a href="tel:+10000000000" className="flex items-center space-x-2">
           <FaPhone color={"#7f9aee"} className="text-gray-400 z-1 " />
-          <span className="z-1 ">+1 (000) 000-0000 (O)</span>
+          <span className="z-1 ">{MOBILE_NUMBER} (O)</span>
         </a>
         <a
           href="mailto:agent@agent.com"
           className="flex items-center space-x-2 z-1"
         >
           <FaEnvelope color={"#7f9aee"} className="text-gray-400 z-1 " />
-          <span className="z-1 ">agent@agent.com</span>
+          <span className="z-1 ">{EMAIL}</span>
         </a>
       </div>
       <div className="border-0 md:border-r z-1 md:my-4  border-white" />

@@ -6,7 +6,9 @@ import SimilarProperties from "@/component/DetailPageContent/SimilarProperties";
 
 const Listing = () => {
   return (
-    <div className={`${styles.mainContainer} !bg-[#F5F5F5]`}>
+    <div
+      className={`${styles.mainContainer} !bg-[#F5F5F5] mt-[54px] md:mt-[107px]`}
+    >
       <div
         className={`${styles.innerContent} w-full flex-col md:flex-row text-[#212529]`}
       >

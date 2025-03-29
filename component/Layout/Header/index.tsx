@@ -6,24 +6,23 @@ import { Menu, X } from "lucide-react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import { MdWifiCalling3, MdOutgoingMail } from "react-icons/md";
 import { MdOutlineArrowDropDown } from "react-icons/md";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { EMAIL, MOBILE_NUMBER } from "@/lib/constant";
 
 const Header = () => {
-  const pathname = usePathname();
 
   const [isOpen, setIsOpen] = useState(false);
 
   const getContactSection = () => {
     return (
-      <div className="flex border-b pb-3 px-3 border-white ">
+      <div className="flex border-b pb-3 px-3 border-white flex flex-col md:flex-row gap-2">
         <a
           className="flex items-center pr-4 text-[17px]  font-medium gap-1"
           href="tel:+10000000000"
           id="header-phone"
         >
           <MdWifiCalling3 color={"#7f9aee"} />
-          +1 (000) 000-0000
+        {MOBILE_NUMBER}
         </a>
         <a
           className="flex items-center text-[17px] font-medium pr-4  gap-1"
@@ -31,7 +30,7 @@ const Header = () => {
           id="header-mail"
         >
           <MdOutgoingMail color={"#7f9aee"} />
-          agent@agent.com
+          {EMAIL}
         </a>
         <div className="text-[14px] border border-[#7f9aee] font-medium px-2 py-1 rounded">
           REQUEST A CALL
@@ -52,7 +51,7 @@ const Header = () => {
     return (
       <>
         <li className="relative group">
-          <button className="flex items-center gap-1 w-full md:w-auto">
+          <button className="flex items-center gap-1 w-full flex items-center justify-center">
             LISTING <MdOutlineArrowDropDown color={"#7f9aee"} />
           </button>
 
@@ -68,7 +67,7 @@ const Header = () => {
           </div>
         </li>
         <li className="relative group">
-          <button className="flex items-center gap-1 w-full md:w-auto">
+          <button className="flex items-center gap-1 w-full flex items-center justify-center">
             CONTACT <MdOutlineArrowDropDown color={"#7f9aee"} />
           </button>
 
@@ -93,7 +92,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`bg-[#000] text-white max-w-full py-[10px] px-4 z-11  w-full top-0 ${pathname === "/" ? "fixed" : "sticky"}`}
+      className={`bg-[#000] text-white max-w-full py-[10px] px-4 z-11  w-full top-0 fixed`}
     >
       <header className="container w-full max-w-full flex justify-between items-center">
         {/* Left - Logo/Icon */}

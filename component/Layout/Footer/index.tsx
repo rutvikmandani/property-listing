@@ -11,9 +11,11 @@ import {
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import Link from "next/link";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { EMAIL, MOBILE_NUMBER } from "@/lib/constant";
 
 const Footer = () => {
   const soldPhotos = [
@@ -72,23 +74,23 @@ const Footer = () => {
           </div>
           <a href="tel:+10000000000" className="flex items-center space-x-2">
             <FaPhone className="text-gray-400" />
-            <span>+1 (000) 000-0000 (O)</span>
+            <span>{MOBILE_NUMBER} (O)</span>
           </a>
           <a
             href="mailto:agent@agent.com"
             className="flex items-center space-x-2"
           >
             <FaEnvelope className="text-gray-400" />
-            <span>agent@agent.com</span>
+            <span>{EMAIL}</span>
           </a>
         </div>
 
         <div className="grid grid-cols-2 gap-3">
-          <div className="space-y-2">
-            <p>Home</p>
-            <p>Residential</p>
-            <p>Condo</p>
-            <p>Commercial</p>
+          <div className="space-y-2 flex flex-col">
+            <Link href="/property-list">Home</Link>
+            <Link href="/property-list">Residential</Link>
+            <Link href="/property-list">Condo</Link>
+            <Link href="/property-list">Commercial</Link>
           </div>
           <div className="space-y-2">
             <p>City of Brampton</p>
