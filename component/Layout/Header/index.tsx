@@ -32,7 +32,7 @@ const Header = () => {
           <MdOutgoingMail color={"#7f9aee"} />
           {EMAIL}
         </a>
-        <div className="text-[14px] border border-[#7f9aee] font-medium px-2 py-1 rounded">
+        <div className="text-[14px] border flex items-center justify-center border-[#7f9aee] font-medium px-2 py-1 rounded">
           REQUEST A CALL
         </div>
       </div>
