@@ -1,8 +1,12 @@
-import React from "react";
 import PropertyListingPageContent from "@/component/PropertyListingPageContent";
+import React, { Suspense } from "react";
 
 const Listing = () => {
-  return <PropertyListingPageContent />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PropertyListingPageContent />{" "}
+    </Suspense>
+  );
 };
 
 export default Listing;
