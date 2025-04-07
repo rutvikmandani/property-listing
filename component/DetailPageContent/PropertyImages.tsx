@@ -7,7 +7,7 @@ import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const PropertyImages = ({ imgList }) => {
+const PropertyImages = ({ imgList }: any) => {
   return (
     <Swiper
       breakpoints={{
