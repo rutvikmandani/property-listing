@@ -3,11 +3,12 @@
 import React from "react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { MdWifiCalling3, MdOutgoingMail } from "react-icons/md";
+import { MdOutgoingMail } from "react-icons/md";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import Link from "next/link";
 import { EMAIL, MOBILE_NUMBER } from "@/lib/constant";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
+import { FaPhone } from "react-icons/fa6";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const Header = () => {
           href="tel:+10000000000"
           id="header-phone"
         >
-          <MdWifiCalling3 color={"#7f9aee"} />
+          <FaPhone color={"#7f9aee"} />
           {MOBILE_NUMBER}
         </a>
         <a

@@ -39,7 +39,7 @@ const Footer = () => {
             modules={[Navigation, Pagination]}
             pagination={false}
           >
-            {soldPhotos.map((property: any, index:number) => (
+            {soldPhotos.map((property: any, index: number) => (
               <SwiperSlide key={index}>
                 <img src={property} className="w-full" alt="sold img" />
               </SwiperSlide>
@@ -87,16 +87,26 @@ const Footer = () => {
 
         <div className="grid grid-cols-2 gap-3">
           <div className="space-y-2 flex flex-col">
-            <Link href="/property-list">Home</Link>
-            <Link href="/property-list">Residential</Link>
-            <Link href="/property-list">Condo</Link>
-            <Link href="/property-list">Commercial</Link>
+            <Link href={`/`}>Home</Link>
+            <Link href={`/property-list?listingType=RESIDENTIAL`}>
+              Residential
+            </Link>
+            <Link href={`/property-list?listingType=CONDO`}>Condo</Link>
+            <Link href={`/property-list?listingType=COMMERCIAL`}>
+              Commercial
+            </Link>
           </div>
-          <div className="space-y-2">
-            <p>City of Brampton</p>
-            <p>City of Guelph</p>
-            <p>City of Toronto</p>
-            <p>City of Hamilton</p>
+          <div className="space-y-2 flex flex-col">
+            <Link href={`/property-list?cityName=Brampton`}>
+              City of Brampton
+            </Link>
+            <Link href={`/property-list?cityName=Guelph`}>City of Guelph</Link>
+            <Link href={`/property-list?cityName=Toronto`}>
+              City of Toronto
+            </Link>
+            <Link href={`/property-list?cityName=Hamilton`}>
+              City of Hamilton
+            </Link> 
           </div>
         </div>
       </div>

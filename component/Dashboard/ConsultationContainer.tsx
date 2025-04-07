@@ -26,7 +26,7 @@ export default function ConsultationContainer() {
             <InputField type="email" placeholder="Email" onChange={() => null} />
           </div>
 
-          <button className="bg-lightBlue text-white font-semibold py-2 px-6 rounded-md transition">
+          <button className="bg-lightBlue text-white whitespace-nowrap font-semibold py-2 px-6 rounded-md transition">
             GET A FREE CONSULTATION
           </button>
         </div>

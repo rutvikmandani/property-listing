@@ -1,6 +1,7 @@
 import { EMAIL, MOBILE_NUMBER } from "@/lib/constant";
 import React from "react";
-import { MdWifiCalling3, MdOutgoingMail } from "react-icons/md";
+import { MdOutgoingMail } from "react-icons/md";
+import { FaPhone } from "react-icons/fa6";
 
 const page = () => {
   const images = [
@@ -23,27 +24,25 @@ const page = () => {
                 alt="Realtor"
                 className="w-48  object-cover rounded-lg"
               />
-              <div className="bg-lightBlue text-white p-4 rounded-lg w-full">
+              <div className="bg-lightBlue text-white p-4 rounded-lg w-full flex flex-col gap-2">
                 <h2 className="text-lg font-bold">REALTOR</h2>
                 <p className="text-sm">Designation</p>
-                <div className="mt-2 text-sm">
-                  <a
-                    className="flex items-center pr-4 text-[17px]  font-medium gap-1"
-                    href="tel:+10000000000"
-                    id="header-phone"
-                  >
-                    <MdWifiCalling3 />
-                    {MOBILE_NUMBER}
-                  </a>
-                  <a
-                    className="flex items-center text-[17px] font-medium pr-4  gap-1"
-                    href="mailto:agent@agent.com"
-                    id="header-mail"
-                  >
-                    <MdOutgoingMail />
-                    {EMAIL}
-                  </a>
-                </div>
+                <a
+                  className="flex items-center pr-4 text-[17px]  font-medium gap-1"
+                  href="tel:+10000000000"
+                  id="header-phone"
+                >
+                  <FaPhone />
+                  {MOBILE_NUMBER}
+                </a>
+                <a
+                  className="flex items-center text-[17px] font-medium pr-4  gap-1"
+                  href="mailto:agent@agent.com"
+                  id="header-mail"
+                >
+                  <MdOutgoingMail />
+                  {EMAIL}
+                </a>
               </div>
             </div>
 

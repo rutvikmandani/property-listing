@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import { FaPlus } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 interface CityType {
   name: string;
@@ -9,6 +11,8 @@ interface CityType {
 }
 
 const FeatureNeighborhood = () => {
+  const router = useRouter();
+
   const images: string[] = [
     "/images/cities/Toronto.jpg",
     "/images/cities/Mississauga.jpg",
@@ -87,7 +91,12 @@ const FeatureNeighborhood = () => {
             >
               <h3 className="text-white">{city.name}</h3>
               <p className="text-white">BUY | SELL | INVEST</p>
-              <div className="bg-white cursor-pointer rounded-full p-3 w-max h-max">
+              <div
+                className="bg-white cursor-pointer rounded-full p-3 w-max h-max"
+                onClick={() => {
+                  router.push(`/property-list?cityName=${city.name}`);
+                }}
+              >
                 <FaPlus color="#7f9aee" />
               </div>
             </div>

@@ -13,6 +13,7 @@ const PropertyListingPageContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const listingType = searchParams.get("listingType");
+  const cityName = searchParams.get("cityName");
 
   const onFilterRemove = () => {
     router.replace(`?`, { scroll: false });
@@ -25,11 +26,11 @@ const PropertyListingPageContent = () => {
         className={`${styles.innerContent} w-full flex-col md:flex-row text-[#212529]`}
       >
         <FindMyProperty />
-        {listingType && (
+        {(listingType || cityName) && (
           <div
             className={`border-[#bec0c4] rounded-lg border p-2 max-w-max flex items-center gap-2 mb-[25px]`}
           >
-            Property Type - {listingType}{" "}
+            {`${cityName ? cityName : `Property Type - ${listingType}`}`}
             <IoMdClose
               onClick={onFilterRemove}
               className="cursor-pointer"
@@ -37,8 +38,8 @@ const PropertyListingPageContent = () => {
             />
           </div>
         )}
-        <h3 className="text-[27px] font-normal text-black pb-4">
-          Residential Property ListingsMap
+        <h3 className="text-[27px] capitalize font-normal text-black pb-4">
+          {`${listingType ? listingType?.toLowerCase() : ""} Property Listings`}
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-20 lg:grid-cols-4 bg-neutral gap-4">
           {[

@@ -45,7 +45,7 @@ export default {
           DEFAULT: "#E5E5E5",
         },
         fieldBg: {
-          DEFAULT: "#E4E4E7",
+          DEFAULT: "#f4f4f5",
         }
       },
     },

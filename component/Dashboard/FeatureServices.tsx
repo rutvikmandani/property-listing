@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 
 const FeatureServices = () => {
   const featuredServices = [
@@ -15,11 +16,17 @@ const FeatureServices = () => {
       </h3>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {featuredServices.map((service, index) => (
-          <div key={index} className="relative max-w-max shadow-md rounded-lg">
+          <div
+            key={index}
+            className={`relative max-w-max shadow-md rounded-lg cursor-pointer ${styles.serviceWrapper}`}
+          >
             <img src={service.img} alt={service.name} />
-            <h5 className="absolute flex top-0 left-0 right-0 bottom-0 m-auto items-center font-bold justify-center text-white  text-[14px] md:text-[22px] font-medium">
+            <h5
+              className={`absolute flex top-0 left-0 right-0 bottom-0 m-auto items-center font-bold justify-center text-white  text-[14px] md:text-[22px] font-medium`}
+            >
               {service.name}
             </h5>
+            <div className={`absolute w-full h-full top-0 left-0 ${styles.hoverColor}`}></div>
           </div>
         ))}
       </div>

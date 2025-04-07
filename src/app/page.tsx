@@ -14,7 +14,7 @@ const RealtorLandingPage: React.FC = () => {
     <div className="min-h-screen bg-white relative overflow-hidden">
       <div className="relative">
         <div
-          className={`max-h-76 overflow-hidden sm:max-h-[400px] md:max-h-[600px] lg:max-h-[100vh]  ${styles.container}`}
+          className={`max-h-[310px] overflow-hidden sm:max-h-[400px] md:max-h-[600px] lg:max-h-[100vh]  ${styles.container}`}
         >
           <div className={styles.imgContainer} />
           <ContentWrapper />
