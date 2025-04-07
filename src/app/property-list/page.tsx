@@ -1,22 +1,46 @@
+"use client";
+
 import FindMyProperty from "@/component/Dashboard/FindMyProperty";
 import React from "react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import properties from "@/public/propertyData.json";
 import SimilarProperties from "@/component/DetailPageContent/SimilarProperties";
+import { useRouter, useSearchParams } from "next/navigation";
+import { IoMdClose } from "react-icons/io";
 
 const Listing = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const listingType = searchParams.get("listingType");
+
+  const onFilterRemove = () => {
+    router.replace(`?`, { scroll: false });
+  };
+
   return (
     <div
-      className={`${styles.mainContainer} !bg-[#F5F5F5] mt-[54px] md:mt-[107px]`}
+      className={`${styles.mainContainer} !bg-neutral-light mt-[54px] md:mt-[107px] px-6`}
     >
       <div
         className={`${styles.innerContent} w-full flex-col md:flex-row text-[#212529]`}
       >
         <FindMyProperty />
+        {listingType && (
+          <div
+            className={`border-[#bec0c4] rounded-lg border p-2 max-w-max flex items-center gap-2 mb-[25px]`}
+          >
+            Property Type - {listingType}{" "}
+            <IoMdClose
+              onClick={onFilterRemove}
+              className="cursor-pointer"
+              color={"red"}
+            />
+          </div>
+        )}
         <h3 className="text-[27px] font-normal text-black pb-4">
           Residential Property ListingsMap
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-20 lg:grid-cols-4 bg-[#F8F8F8] gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-20 lg:grid-cols-4 bg-neutral gap-4">
           {[
             ...properties,
             ...properties,

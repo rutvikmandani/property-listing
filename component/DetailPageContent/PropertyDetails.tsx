@@ -2,9 +2,67 @@
 import React, { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
+interface PropertyData {
+  Property: {
+    "Property Type": string;
+    Status: string;
+    "Building Type": string;
+    "Building Style": string;
+    Size: string;
+    Area: string;
+    Community: string;
+  };
+  Land: {
+    "Fronting On": string;
+    "Lot Depth": string;
+    Frontage: string;
+    "Lot Size": string;
+    Sewer: string;
+    Zoning: string;
+  };
+  Inside: {
+    Bedrooms: number;
+    Bathrooms: number;
+    Kitchen: number;
+    Rooms: number;
+    Fireplace: string;
+    "Den/Family Room": string;
+    "Central Vac": string;
+    "Patio Terrace": string;
+    "Air Conditioning": string;
+  };
+  Building: {
+    Basement: string;
+    Heating: string;
+    "Fuel/Heating": string;
+    Exterior: string;
+  };
+  Parking: {
+    "Garage Type": string;
+    "Garage Space": number;
+  };
+}
+
+interface ExtraData {
+  Fees: {
+    Taxes: string;
+    "Tax Year": number;
+    "Maintenance Fee": string;
+    "Central A/C Included": string;
+    "Heating Included": string;
+    "Parking Included": string;
+  };
+  "Additional Info": {
+    Locker: string;
+    "Condo Corporation": string;
+    "Corporation Number": number;
+    "Virtual Tour": string;
+  };
+}
+
 const PropertyDetails = () => {
   const [isFeatureOpen, setIsFeatureOpen] = useState(false);
-  const PropertyDetails = {
+  const PropertyDetails: PropertyData = {
     Property: {
       "Property Type": "Condo",
       Status: "For Sale",
@@ -45,7 +103,7 @@ const PropertyDetails = () => {
     },
   };
 
-  const extraData = {
+  const extraData: ExtraData = {
     Fees: {
       Taxes: "$2,424.83",
       "Tax Year": 2024,
@@ -62,19 +120,36 @@ const PropertyDetails = () => {
     },
   };
 
+  const getData = (data: PropertyData | ExtraData) => {
+    return Object.keys(data).map((a) => {
+      return {
+        title: a,
+        data: Object.keys(data[a as keyof typeof data]).map((b) => {
+          return {
+            title: b,
+            value: data[a as keyof typeof data][b as keyof (typeof data)[keyof typeof data]],
+          };
+        }),
+      };
+    });
+  };
+
+  const propertyData = getData(PropertyDetails);
+  const extraPropertyData = getData(extraData);
+
   return (
-    <div className="bg-[#F8F8F8] rounded p-4">
-      <div className="flex pt-5  justify-between flex-col gap-3 sm:flex-row items-start">
+    <div className="bg-neutral rounded p-4">
+      <div className="flex pt-5 justify-between flex-col gap-3 sm:flex-row items-start">
         <div className="flex flex-col gap-3">
-          <h2 className="text-2xl font-bold font-medium text=[#111111]">
+          <h2 className="text-2xl font-bold font-medium text-text-secondary">
             1003-5180 Yonge Street
           </h2>
           <p className="text-gray-600 font-medium">Toronto, ON</p>
-          <div className="flex items-center space-x-4 text-[#444444]">
+          <div className="flex items-center space-x-4 text-text-tertiary">
             <p className="font-medium">1 Bed</p>
-            <span className="text-gray-400">|</span>
+            <span className="text-text-gray">|</span>
             <p className="font-medium">1 Bath</p>
-            <span className="text-gray-400">|</span>
+            <span className="text-text-gray">|</span>
             <p className="font-medium">0-499 sqft</p>
           </div>
         </div>
@@ -82,16 +157,16 @@ const PropertyDetails = () => {
           <p className="text-2xl font-semibold text-gray-900 font-medium">
             $650,000
           </p>
-          <p className="text-[#aaaaaa] text-sm  font-medium">
+          <p className="text-text-gray3 text-sm font-medium">
             Added: 56 minutes ago
           </p>
-          <span className="text-white w-max font-semibold text-green-700 bg-[#17b765] px-2 py-1 rounded-full">
+          <span className="text-white w-max font-semibold text-green-700 bg-primary px-2 py-1 rounded-full">
             New
           </span>
         </div>
       </div>
 
-      <button className="mt-3 w-full py-2 border rounded-lg text-gray-800 font-semibold hover:bg-gray-100 transition">
+      <button className="mt-3 w-full py-2 border border-black rounded-lg text-gray-800 font-semibold hover:bg-gray-100 transition">
         Virtual Tour
       </button>
 
@@ -159,15 +234,13 @@ const PropertyDetails = () => {
           {isFeatureOpen && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="flex flex-col gap-6">
-                {Object.keys(PropertyDetails).map((a, index) => (
-                  <div key={`${index}-${a}`}>
-                    <h3 className="text-xl font-bold mb-2">{a}</h3>
+                {propertyData.map((a, index) => (
+                  <div key={`${index}-${a.title}`}>
+                    <h3 className="text-xl font-bold mb-2">{a.title}</h3>
                     <div className="flex gap-1 flex-col">
-                      {Object.keys(
-                        PropertyDetails[a as keyof typeof PropertyDetails]
-                      ).map((b, i) => (
-                        <p className="text-[14px]" key={`${i}-${b}`}>
-                          <strong>{b}:</strong> {PropertyDetails[a][b]}
+                      {a.data.map((b, i) => (
+                        <p className="text-[14px]" key={`${i}-${b.title}`}>
+                          <strong>{b.title}:</strong> {b.value}
                         </p>
                       ))}
                     </div>
@@ -175,17 +248,15 @@ const PropertyDetails = () => {
                 ))}
               </div>
               <div className="flex flex-col gap-6">
-                {Object.keys(extraData).map((a, index) => (
-                  <div key={`${index}-${a}`}>
-                    <h3 className="text-xl font-bold mb-2">{a}</h3>
+                {extraPropertyData.map((a, index) => (
+                  <div key={`${index}-${a.title}`}>
+                    <h3 className="text-xl font-bold mb-2">{a.title}</h3>
                     <div className="flex gap-1 flex-col">
-                      {Object.keys(extraData[a as keyof typeof extraData]).map(
-                        (b, i) => (
-                          <p className="text-[14px]" key={`${i}-${b}`}>
-                            <strong>{b}:</strong> {extraData[a][b]}
-                          </p>
-                        )
-                      )}
+                      {a.data.map((b, i) => (
+                        <p className="text-[14px]" key={`${i}-${b.title}`}>
+                          <strong>{b.title}:</strong> {b.value}
+                        </p>
+                      ))}
                     </div>
                   </div>
                 ))}
@@ -194,7 +265,7 @@ const PropertyDetails = () => {
           )}
           <button
             onClick={() => setIsFeatureOpen((prev) => !prev)}
-            className="mt-3 w-full py-2 border rounded-lg text-gray-800 flex justify-center items-center gap-3 font-semibold hover:bg-gray-100 transition"
+            className="mt-3 w-full py-2 border rounded-lg border-black text-gray-800 flex justify-center items-center gap-3 font-semibold hover:bg-gray-100 transition"
           >
             {`See ${isFeatureOpen ? "less" : "more"} and features`}{" "}
             {isFeatureOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}

@@ -37,7 +37,7 @@ const SimilarProperties = ({
         className={styles.imgSwiperContainer}
       >
         {images?.length !== 0 ? (
-          images.slice(0, 4).map((img: any, index: any) => (
+          images.slice(0, 4).map((img: any, index: number) => (
             <SwiperSlide key={img + index}>
               <div className=" w-full h-full" onClick={handleRedirect}>
                 <img
@@ -60,7 +60,7 @@ const SimilarProperties = ({
           </SwiperSlide>
         )}
       </Swiper>
-      <div className="flex bg-[#7f9aee] gap-2 p-3 items-center ">
+      <div className="flex bg-lightBlue gap-2 p-3 items-center ">
         <ImLocation size={24} color="white" />
         <div className="text-white truncate text-[14px]">{address ?? "-"}</div>
       </div>

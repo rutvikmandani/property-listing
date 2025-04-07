@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { IoSearchSharp } from "react-icons/io5";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import Select from "../UIFields/Select";
+import SelectField from "../UIFields/SelectField";
 
 const FindMyProperty = () => {
   const [isAdvanceOptionOpen, setIsAdvanceOptionOpen] = useState(false);
@@ -182,9 +182,11 @@ const FindMyProperty = () => {
           name="address"
           placeholder="Type your address..."
           value=""
-          className=" w-full py-4 pl-2 border-2 border-[#7f9aee] rounded-tl-lg rounded-bl-lg focus:outline-none"
+          className=" w-full py-4 pl-2 border-2 border-lightBlue rounded-tl-lg rounded-bl-lg focus:outline-none"
+          onChange={() => null}
+
         />
-        <button className="bg-[#7f9aee] flex items-center gap-2 rounded-tr-lg rounded-br-lg justify-center py-3 text-white w-full md:max-w-[350px]">
+        <button className="bg-lightBlue flex items-center gap-2 rounded-tr-lg rounded-br-lg justify-center py-3 text-white w-full md:max-w-[350px]">
           <IoSearchSharp />
           SEARCH
         </button>
@@ -193,10 +195,11 @@ const FindMyProperty = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pt-4">
           {fieldList.map((a, index) => (
             <div key={index} className="flex">
-              <Select
+              <SelectField
                 className="max-w-xs"
                 placeholder={a?.name}
                 options={a?.options}
+                value={undefined}
               />
             </div>
           ))}

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -27,9 +29,8 @@ interface Property {
 const FeatureListing = () => {
   const getData = (data: Property, index: number) => {
     return (
-      <SwiperSlide>
+      <SwiperSlide key={index}>
         <div
-          key={index}
           className={`w-[100%] max-w-[440px] relative shrink-0 bg-white shadow-lg rounded-lg overflow-hidden p-[15px] text-[#212529]`}
         >
           <SimilarProperties {...data} index={index} />

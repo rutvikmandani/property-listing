@@ -3,14 +3,13 @@
 import React from "react";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import { MdWifiCalling3, MdOutgoingMail } from "react-icons/md";
 import { MdOutlineArrowDropDown } from "react-icons/md";
 import Link from "next/link";
 import { EMAIL, MOBILE_NUMBER } from "@/lib/constant";
+import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 
 const Header = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   const getContactSection = () => {
@@ -22,7 +21,7 @@ const Header = () => {
           id="header-phone"
         >
           <MdWifiCalling3 color={"#7f9aee"} />
-        {MOBILE_NUMBER}
+          {MOBILE_NUMBER}
         </a>
         <a
           className="flex items-center text-[17px] font-medium pr-4  gap-1"
@@ -32,7 +31,7 @@ const Header = () => {
           <MdOutgoingMail color={"#7f9aee"} />
           {EMAIL}
         </a>
-        <div className="text-[14px] border flex items-center justify-center border-[#7f9aee] font-medium px-2 py-1 rounded">
+        <div className="text-[14px] border flex items-center justify-center border-lightBlue font-medium px-2 py-1 rounded">
           REQUEST A CALL
         </div>
       </div>
@@ -59,7 +58,11 @@ const Header = () => {
           <div className="h-0 group-hover:h-auto transition-all duration-300 overflow-hidden">
             <ul className="md:absolute left-0 mt-2 cursor-pointe flex flex-col w-full md:w-[200px]  bg-blue-500 text-white rounded-lg shadow-lg opacity-0 scale-y-0 origin-top transition-all duration-300 ease-out group-hover:opacity-100 group-hover:scale-y-100">
               {listMenuTabs.map((a) => (
-                <Link href="/property-list" key={a} className="px-4 py-2">
+                <Link
+                  href={`/property-list?listingType=${a}`}
+                  key={a}
+                  className="px-4 py-2"
+                >
                   {a}
                 </Link>
               ))}
@@ -83,7 +86,7 @@ const Header = () => {
             </ul>
           </div>
         </li>
-        <div className="text-[14px] border border-[#7f9aee] font-semibold px-2 py-1 rounded">
+        <div className="text-[14px] border border-lightBlue font-semibold px-2 py-1 rounded">
           LOGIN
         </div>
       </>
@@ -92,10 +95,9 @@ const Header = () => {
 
   return (
     <nav
-      className={`bg-[#000] text-white max-w-full py-[10px] px-4 z-11  w-full top-0 fixed`}
+      className={`bg-secondary-dark text-white max-w-full py-[10px] px-4  w-full top-0 fixed ${styles.navbarWrapper}`}
     >
       <header className="container w-full max-w-full flex justify-between items-center">
-        {/* Left - Logo/Icon */}
         <Link href="/">
           <img
             src="/images/logo.webp"
@@ -111,7 +113,7 @@ const Header = () => {
           </ul>
         </div>
 
-        <div className="md:hidden">
+        <div className="md:hidden rounded bg-lightBlue p-2 flex">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

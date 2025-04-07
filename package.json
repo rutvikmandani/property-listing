@@ -1,5 +1,5 @@
 {
-  "name": "idx-new-template-agentroof",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,25 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "install": "^0.13.0",
-    "lucide-react": "^0.484.0",
-    "next": "15.2.4",
-    "npm": "^11.2.0",
+    "@heroui/react": "2.7.5",
+    "framer-motion": "^11.15.0",
+    "lucide-react": "^0.487.0",
+    "next": "15.1.2",
+    "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.5.0",
-    "sass": "^1.86.0",
-    "swiper": "^11.2.6"
+    "react-icons": "^5.4.0",
+    "sass": "^1.83.0",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.0.17",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.2.4",
-    "tailwindcss": "^4.0.17",
+    "eslint-config-next": "15.1.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
 }

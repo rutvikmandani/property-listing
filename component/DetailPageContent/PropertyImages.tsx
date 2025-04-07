@@ -18,8 +18,8 @@ const PropertyImages = ({ imgList }) => {
       modules={[Navigation, Pagination]}
       pagination={false}
     >
-      {imgList.map((property: any) => (
-        <SwiperSlide>
+      {imgList.map((property: any, index: number) => (
+        <SwiperSlide key={index}>
           <img
             src={property?.image_url}
             className={`w-full h-[340px] md:h-[490px] rounded ${styles.detailPageImg}`}

@@ -16,14 +16,14 @@ const DetailPageContent = () => {
 
   return (
     <div
-      className={`${styles.innerContent} py-[50px] flex gap-4 text-black flex-col md:flex-row text-[#212529]`}
+      className={`${styles.innerContent} py-[50px] flex gap-4 text-text-primary flex-col md:flex-row`}
     >
       <div className="w-[100%] md:w-[64%]">
         <PropertyImages imgList={imgList} />
         <PropertyDetails />
-        <div className=" bg-[#F8F8F8] mt-4 rounded p-4 ">
+        <div className=" bg-neutral mt-4 rounded p-4 ">
           <h3 className="text-[20px] font-bold mb-4">Similar Properties</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-[#F8F8F8] gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 bg-neutral gap-4">
             {properties.map((a, index) => (
               <div
                 key={index}

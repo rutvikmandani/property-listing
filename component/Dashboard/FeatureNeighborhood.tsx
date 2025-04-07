@@ -83,7 +83,7 @@ const FeatureNeighborhood = () => {
               {city.name}
             </h3>
             <div
-              className={`absolute z-2 flex top-0 bottom-0 left-0 right-0 items-center bg-[#7f9aee]  m-auto font-bold justify-center flex-col gap-3 ${styles.hoverContent}`}
+              className={`absolute z-2 flex top-0 bottom-0 left-0 right-0 items-center bg-lightBlue  m-auto font-bold justify-center flex-col gap-3 ${styles.hoverContent}`}
             >
               <h3 className="text-white">{city.name}</h3>
               <p className="text-white">BUY | SELL | INVEST</p>

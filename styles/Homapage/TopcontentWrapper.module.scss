@@ -1,22 +1,30 @@
 .container {
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
-  transition: all 5s;
   overflow: hidden;
-  background-image: url("../../public/images/hero-bg.jpg");
-  animation: scaleUp 3s ease-in-out forwards;
   display: inline-block;
+  background: transparent;
+  .imgContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../../public/images/hero-bg.jpg");
+    animation: scaleUp 3s ease-in-out forwards;
+    transition: all 5s;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
 }
 
 @keyframes scaleUp {
   from {
-    transform: scale(0.85);
+    transform: scale(1);
   }
   to {
-    transform: scale(1);
+    transform: scale(1.15);
   }
 }
 
@@ -191,7 +199,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 0 1.5rem;
 
   .innerContent {
     width: 100%;
@@ -217,4 +224,11 @@
 
 .detailPageImg {
   aspect-ratio: 3 / 2;
+}
+.navbarWrapper {
+  z-index: 11;
+}
+
+.z2Index {
+  z-index: 2;
 }

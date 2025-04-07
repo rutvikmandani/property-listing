@@ -11,7 +11,7 @@ const page = () => {
   ];
   return (
     <div className="mt-[54px] md:mt-[107px]">
-      <div className="bg-[#7f9aee] py-[30px] md:py-[40px] text-white flex align-center justify-center text-xl sm:text-2xl font-semibold">
+      <div className="bg-lightBlue py-[30px] md:py-[40px] text-white flex align-center justify-center text-xl sm:text-2xl font-semibold">
         About Me
       </div>
       <div className="bg-gray-100 flex items-center justify-center">
@@ -23,7 +23,7 @@ const page = () => {
                 alt="Realtor"
                 className="w-48  object-cover rounded-lg"
               />
-              <div className="bg-[#7f9aee] text-white p-4 rounded-lg w-full">
+              <div className="bg-lightBlue text-white p-4 rounded-lg w-full">
                 <h2 className="text-lg font-bold">REALTOR</h2>
                 <p className="text-sm">Designation</p>
                 <div className="mt-2 text-sm">

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import { IoLocationOutline } from "react-icons/io5";
@@ -16,7 +17,7 @@ const PropertyValue = () => {
           Type Your Address Below To Find Out How Much Your Property Is Worth
         </h6>
         <div className="flex gap-2 flex-col md:flex-row md:gap-0  w-full">
-          <div className="flex items-center  w-full pl-2 border-2 border-[#7f9aee] rounded-tl-lg rounded-bl-lg">
+          <div className="flex items-center  w-full pl-2 border-2 border-lightBlue rounded-tl-lg rounded-bl-lg">
             <IoLocationOutline size={25} color="#d62340" />
             <input
               type="text"
@@ -24,10 +25,11 @@ const PropertyValue = () => {
               name="address"
               placeholder="Type your address..."
               value=""
+              onChange={() => null}
               className=" w-full py-4 pl-2 focus:outline-none"
             />
           </div>
-          <button className="bg-[#7f9aee] rounded-tr-lg rounded-br-lg py-3 text-white w-full md:max-w-[350px]">
+          <button className="bg-lightBlue rounded-tr-lg rounded-br-lg py-3 text-white w-full md:max-w-[350px]">
             Show my property’s value
           </button>
         </div>

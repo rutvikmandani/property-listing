@@ -39,8 +39,8 @@ const Footer = () => {
             modules={[Navigation, Pagination]}
             pagination={false}
           >
-            {soldPhotos.map((property: any) => (
-              <SwiperSlide>
+            {soldPhotos.map((property: any, index:number) => (
+              <SwiperSlide key={index}>
                 <img src={property} className="w-full" alt="sold img" />
               </SwiperSlide>
             ))}
