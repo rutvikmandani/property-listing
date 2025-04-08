@@ -2,7 +2,6 @@ import React, { forwardRef } from "react";
 import { Textarea } from "@heroui/react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 
-
 interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
@@ -10,7 +9,7 @@ interface TextareaProps
 }
 
 const TextareaField = forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ label, error, className, placeholder, ...props }, ref) => {
+  ({ label, error, className, value, placeholder }, ref) => {
     return (
       <div className="w-full m-0">
         {label && (
@@ -19,10 +18,10 @@ const TextareaField = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <Textarea
           ref={ref}
           placeholder={placeholder}
-          className={`w-full bg-fieldBg border rounded-lg focus:ring-2 focus:ring-blue-500 ${
+          className={`w-full bg-fieldBg border rounded-[12px] focus:ring-2 focus:ring-blue-500 ${
             error ? "border-red-500" : "border-gray-300"
           } ${className} ${styles.textareaWrapper}`}
-          // {...props}
+          // value={value}
         />
         {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
       </div>

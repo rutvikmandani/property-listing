@@ -17,13 +17,13 @@ export default function ConsultationContainer() {
               options={[]}
               value={undefined}
             />
-            <InputField type="text" placeholder="Full name" onChange={() => null} />
+            <InputField type="text" placeholder="Full name" onChange={() => {}} />
             <InputField
               type="text"
               placeholder="(555) 555-5555"
-              onChange={() => null}
+              onChange={() => {}}
             />
-            <InputField type="email" placeholder="Email" onChange={() => null} />
+            <InputField type="email" placeholder="Email" onChange={() => {}} />
           </div>
 
           <button className="bg-lightBlue text-white whitespace-nowrap font-semibold py-2 px-6 rounded-md transition">

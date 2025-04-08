@@ -25,7 +25,7 @@ const PropertyValue = () => {
               name="address"
               placeholder="Type your address..."
               value=""
-              onChange={() => null}
+              onChange={() => {}}
               className=" w-full py-4 pl-2 focus:outline-none"
             />
           </div>

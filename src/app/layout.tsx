@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import { geistSans, geistMono } from "@/config/fonts";
 import Header from "@/component/Layout/Header";
 import Footer from "@/component/Layout/Footer";
+import ProgressProvider from "@/component/ProgressBar";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -29,9 +30,11 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
-          <Header />
-          {children}
-          <Footer />
+          <ProgressProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ProgressProvider>
         </Providers>
       </body>
     </html>

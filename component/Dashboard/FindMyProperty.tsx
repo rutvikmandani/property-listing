@@ -183,7 +183,7 @@ const FindMyProperty = () => {
           placeholder="Type your address..."
           value=""
           className=" w-full py-4 pl-2 border-2 border-lightBlue rounded-tl-lg rounded-bl-lg focus:outline-none"
-          onChange={() => null}
+          onChange={() => {}}
 
         />
         <button className="bg-lightBlue flex items-center gap-2 rounded-tr-lg rounded-br-lg justify-center py-3 text-white w-full md:max-w-[350px]">

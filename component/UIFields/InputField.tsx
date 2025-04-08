@@ -2,14 +2,14 @@ import React, { forwardRef } from "react";
 import { Input } from "@heroui/react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 
-
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface InputPropsList extends React.InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputField = forwardRef<HTMLInputElement, InputProps>(
-  ({ label, error, className, ...props }, ref) => {
+const InputField = forwardRef<HTMLInputElement, InputPropsList>(
+  ({ label, error, className, onChange, value, type, placeholder }, ref) => {
     return (
       <div className="w-full">
         {label && (
@@ -17,13 +17,13 @@ const InputField = forwardRef<HTMLInputElement, InputProps>(
         )}
         <Input
           ref={ref}
-          type="text"
-          placeholder="Enter your name"
-          // onChange={(e) => props.onChange("name", e.target.value)}
-          className={`w-full bg-fieldBg border rounded-lg focus:ring-2 focus:ring-blue-500 ${
+          placeholder={placeholder}
+          onChange={(e) => onChange(e)}
+          className={`w-full bg-fieldBg border rounded-[12px] focus:ring-2 focus:ring-blue-500 ${
             error ? "border-red-500" : "border-gray-300"
           } ${className} ${styles.inputWrapper}`}
-          // {...props}
+          // value={value !== undefined ? String(value) : ""}
+          type={type}
         />
         {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
       </div>

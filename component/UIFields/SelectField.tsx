@@ -17,7 +17,8 @@ const SelectField = forwardRef<HTMLSelectElement, SelectProps>(
       placeholder = "Select an option",
       error,
       className,
-      ...props
+      onChange,
+      ...rest
     },
     ref
   ) => {
@@ -31,13 +32,12 @@ const SelectField = forwardRef<HTMLSelectElement, SelectProps>(
 
         <Select
           placeholder={placeholder}
-          className={`w-full border rounded-lg appearance-none bg-transparent bg-fieldBg hover:rounded-lg
+          className={`w-full border appearance-none rounded-[12px] bg-transparent bg-fieldBg hover:rounded-lg
               ${error ? "border-red-500" : "border-gray-300"} ${className} ${styles.selectWrapper} selectWrapper`}
           onChange={(e) => {
             setIsSelected(!!e.target.value);
-            props.onChange?.(e);
+            onChange?.(e);
           }}
-          // {...props}
         >
           {options.map((option) => (
             <SelectItem key={option}>{option}</SelectItem>
