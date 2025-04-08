@@ -10,7 +10,6 @@
     width: 100%;
     background-image: url("../../public/images/hero-bg.jpg");
     animation: scaleUp 3s ease-in-out forwards;
-    transition: all 5s;
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -162,7 +161,6 @@
       background: #000;
     }
     &::after {
-      height: 70px;
       margin: 0;
       position: absolute;
       content: "";

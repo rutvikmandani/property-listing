@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 import { ImLocation } from "react-icons/im";
-import { FaBed, FaBath, FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { FaBed, FaBath } from "react-icons/fa";
 import { FaRepeat } from "react-icons/fa6";
 
 import "swiper/css";

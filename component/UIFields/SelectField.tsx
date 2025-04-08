@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef } from "react";
 import { Select, SelectItem } from "@heroui/react";
 import styles from "@/styles/Homapage/TopcontentWrapper.module.scss";
 
@@ -22,8 +22,6 @@ const SelectField = forwardRef<HTMLSelectElement, SelectProps>(
     },
     ref
   ) => {
-    const [isSelected, setIsSelected] = useState(false);
-
     return (
       <div className="w-full relative">
         {label && (
@@ -35,7 +33,6 @@ const SelectField = forwardRef<HTMLSelectElement, SelectProps>(
           className={`w-full border appearance-none rounded-[12px] bg-transparent bg-fieldBg hover:rounded-lg
               ${error ? "border-red-500" : "border-gray-300"} ${className} ${styles.selectWrapper} selectWrapper`}
           onChange={(e) => {
-            setIsSelected(!!e.target.value);
             onChange?.(e);
           }}
         >
